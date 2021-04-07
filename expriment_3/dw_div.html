@@ -14,7 +14,7 @@
         }
         div{
             position: relative;
-            float: left;    
+            float: left;
             text-align:center;
             border: 0px solid rgb(0, 0, 0);
         }
@@ -23,6 +23,43 @@
             width:70%;
             height: 500px; 
             margin-left: 15%;
+        }
+        div.div1{
+            width:400px;height:400px;
+            left: 30;top: 20;
+        }
+        div.div2{
+            width:580px;height:120px;
+            left: 100;top: 20;
+        }
+        div.div3{
+            width:580px;height:280px;
+            left: 100;top: 50;
+            text-align: left;
+        }
+        img{
+            
+            cursor: pointer;
+            transition: all 0.6s;
+			}
+        img:hover{
+            transform: scale(1.1);
+        }
+        h4{ 
+            margin-top: 3px;
+            cursor: pointer;
+            transition: all 0.6s;}
+        h4:hover{
+            transform: scale(1.5);
+        }
+        li{ 
+            cursor: pointer;
+            transition: all 0.6s;}
+        li:hover{
+            transform: scale(1.05);
+        }
+        #out:hover{
+            transform: scale(1.05);
         }
         .dropbtn {
             width:150px;height:60px;
@@ -62,9 +99,18 @@
             background-color: #3e8e41;
         }
         </style>
+        <!--img:hover:当鼠标在上面的时候-->
     </head>
     <body>            
         <div class = "div0">
+            <div class = "div1"><a href="./xinxi.html"><img src="self.jpg" style="width:400px;height:400px;"></a> 
+            </div>  
+            <div class = "div2">
+                <h4>姓名：林煜炜</h4>
+                <h4>个人邮箱：15959856966@163.com</h4>
+                <h4>学校：南京理工大学</h4>
+               
+            </div >
             <div class="dropdown">
                 <button class="dropbtn">作品展示</button>
                 <div class="dropdown-content">
