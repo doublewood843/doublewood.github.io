@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+        <title>doublewood</title>	
+        <style type="text/css">
+        body {
+            text-align:center;
+            ruby-align: center;
+            background-image: url("./background.jpg");
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+        }
+        div{
+            position: relative;
+            float: left;    
+            text-align:center;
+            border: 0px solid rgb(0, 0, 0);
+        }
+        div.div0{
+            background-color:rgba(255, 255, 255, 0.5);
+            width:70%;
+            height: 500px; 
+            margin-left: 15%;
+        }
+        .dropbtn {
+            width:150px;height:60px;
+            background-color: rgba(9, 156, 71, 0.5);
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            width:150px;height:60px;
+            left: 100;top: 50;
+            text-align: left;
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:rgba(79, 85, 80, 0.3);
+            min-width: 150px;
+            box-shadow: 10px 10px 5px #888888;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 8px 10px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color:rgba(255, 255, 255, 0.5)}
+        /*下面这个是关键代码，是一个很牛逼的用法*/
+        .dropdown:hover .dropdown-content {
+            display:block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        </style>
+    </head>
+    <body>            
+        <div class = "div0">
+            <div class="dropdown">
+                <button class="dropbtn">作品展示</button>
+                <div class="dropdown-content">
+                    <a href="./代码雨.html">代码雨</a>
+                    <a href="./图片3D切换.html">图片3D切换</a>
+                    <a href="./download.html">文件下载</a>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
