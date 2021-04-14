@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+        <title>behavior</title>	
+        <style type="text/css">
+        body {
+            margin: 0; padding: 0;
+            background-image: url("./background.jpg");
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+        }
+        #back{
+            left: 20%;
+            margin: 0px;
+            padding: 0px;
+            background-color:rgba(255,255,255,0.5);
+            height: 500px;
+        }
+        div{
+            position: relative;
+            border: 1px solid red;
+            height: 200px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="back">
+            <div style="display: flex;border: 0px;height: auto;">
+                <div id="div1" class="inner_div">
+                <p>用js来控制width和hight和上边距</p>
+                </div>
+                <div id="div2" class="inner_div">
+                <p>为什要用js而不用css：</p>
+                <p>如果用css的60%来实现，在浏览器缩小后就会跟着缩小，这不是我想要的，用固定值就更不行了，在不同分辨率的显示器上效果极其不好</p>
+                <p>div和div之间经常在宽度高度是有关联的，用js才好实现</p>
+                </div>
+            </div>            
+            <div id="div3" class="inner_div">
+            
+            </div>
+        </div>
+    </body>
+    <script>
+        window.onload=function(){
+            document.getElementById("back").style.width=window.screen.width *0.6;
+            document.getElementById("div1").style.width=parseInt(document.getElementById("back").style.width)* 0.4;
+            document.getElementById("div2").style.width=parseInt(document.getElementById("back").style.width)* 0.6;
+            document.getElementById("div3").style.width=parseInt(document.getElementById("back").style.width);
+            var inner =document.getElementsByClassName("inner_div")
+            for(var i=0;i<inner.length;i++){
+                inner[i].style.marginTop=window.screen.width *0.03;
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+        <title>behavior</title>	
+        <style type="text/css">
+        body {
+            text-align:center;
+            ruby-align: center;
+            background-image: url("./background.jpg");
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+        }
+        div{
+            width: 1120px;
+            background-color:rgba(255,255,255,0.5);
+            margin:auto;
+        }
+        #img_muji{
+            transition: all 0.6s;
+            width: 200px;
+        }
+        #muji:hover+#img_muji{
+            transform: scale(1.1);
+        }
+        </style>
+    </head>
+    <body onload="alert('body_onload,这时候背景未加载完，卡住了')">
+        <div id="muji_">
+            <p class="ji">请点击“母鸡”</p>
+            <button id="muji" onclick="one()">母鸡</button>
+            <img id="img_muji" src="./muji.jpg">
+            
+        </div>
+        <div id="xiaoji"></div>
+        
+    </body>
+    <script>
+        function one(){
+            var newbutton =document.createElement("button");
+            newbutton.onclick=no;
+            newbutton.innerHTML="小鸡"
+            document.getElementById('xiaoji').append(newbutton);
+        }
+        function no(){
+            alert('不是点“小鸡”')
+        }
+    </script>
+</html>
