@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
+</script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({
+      left:'250px',
+      opacity:'0.5',
+      height:'150px',
+      width:'150px',
+    });
+  });
+});
+</script> 
+</head>
+ 
+<body>
+
+<button>开始动画</button>
+<p>默认情况下，所有 HTML 元素的位置都是静态的，并且无法移动。如需对位置进行操作，记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute。</p>
+<p>可以用 animate() 方法来操作所有 CSS 属性吗？</p>
+<p>是的，几乎可以！不过，需要记住一件重要的事情：当使用 animate() 时，必须使用 Camel 标记法书写所有的属性名，比如，必须使用 paddingLeft 而不是 padding-left，使用 marginRight 而不是 margin-right，等等。</p> 
+<p> 同时，色彩动画并不包含在核心 jQuery 库中。</p>
+<p>如果需要生成颜色动画，您需要从 jQuery.com 下载 Color Animations 插件</p> 
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;">
+</div>
+
+</body>
+</html>

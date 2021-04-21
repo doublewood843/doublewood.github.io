@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
+</head>
+<body>
+
+<h1>设置文本内容</h1>
+
+<h2 id="01">Hello China!</h2>
+<h2 id="02">Hello World!</h2>
+<h2 id="03">None</h2>
+
+<button id="jquery">用jquery</button>
+<button id="document">用document</button>
+</body>
+<script>
+    $(document).ready(function() {
+        $("button#jquery").click(function(){
+            var myElement = $("#02");
+            myElement.text("Hello Shanghai!");
+            var myElement = $("#03");
+            myElement.html("<button>Hello Shanghai!</button>");
+        });
+    });
+
+
+    function use_docu(){
+        document.getElementById("02").innerText="Hello Nanjin"
+        document.getElementById("03").innerHTML="<button>Hello Nanjin!</button>"
+    }
+    document.getElementById("document").onclick=use_docu
+
+    </script>
+</html>
